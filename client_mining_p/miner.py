@@ -15,8 +15,8 @@ def valid_proof(block_string, proof):
     # TODO
     guess = f'{block_string}{proof}'.encode()
     guess_hash = hashlib.sha256(guess).hexdigest()
-    # print('guess', guess)
-    # print('guess hash', guess_hash)
+    print('guess', guess)
+    print('guess hash', guess_hash)
 
     return guess_hash[:6] == "000000"
 
